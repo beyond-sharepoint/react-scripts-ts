@@ -1,6 +1,6 @@
 {
   "name": "react-scripts-ts",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "description": "Configuration and scripts for Create React App.",
   "repository": "wmonk/create-react-app",
   "license": "BSD-3-Clause",
@@ -22,8 +22,8 @@
     "react-scripts-ts": "./bin/react-scripts-ts.js"
   },
   "dependencies": {
-    "autoprefixer": "7.1.2",
     "app-root-path": "^2.0.1",
+    "autoprefixer": "7.1.2",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "chalk": "2.0.1",
     "cli-highlight": "1.1.4",
@@ -38,22 +38,24 @@
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.6",
     "promise": "8.0.1",
+    "raw-loader": "^0.5.1",
     "react-dev-utils": "^3.0.2",
     "react-error-overlay": "^1.0.9",
+    "source-map-loader": "^0.2.1",
     "style-loader": "0.18.2",
+    "sw-precache-webpack-plugin": "0.11.4",
     "ts-jest": "^20.0.10",
     "ts-loader": "^2.3.2",
     "tslint": "^5.5.0",
     "tslint-loader": "^3.5.3",
     "tslint-react": "^3.2.0",
     "typescript": "~2.4.2",
-    "source-map-loader": "^0.2.1",
-    "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "0.5.9",
     "webpack": "3.4.1",
     "webpack-dev-server": "2.6.1",
     "webpack-manifest-plugin": "1.2.1",
-    "whatwg-fetch": "2.0.3"
+    "whatwg-fetch": "2.0.3",
+    "worker-loader": "^0.8.1"
   },
   "devDependencies": {
     "react": "^15.6.1",
