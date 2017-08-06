@@ -48,10 +48,11 @@ const cssFilename = 'static/css/[name].[contenthash:8].css';
 // (See https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/27)
 // However, our output is structured with css, js and media folders.
 // To have this structure working with relative paths, we have to use custom options.
-const extractTextPluginOptions = shouldUseRelativeAssetPaths
-  ? // Making sure that the publicPath goes back to to build folder.
-    { publicPath: Array(cssFilename.split('/').length).join('../') }
-  : {};
+const extractTextPluginOptions = shouldUseRelativeAssetPaths ? // Making sure that the publicPath goes back to to build folder.
+  {
+    publicPath: Array(cssFilename.split('/').length).join('../')
+  } :
+  {};
 
 // This is the production configuration.
 // It compiles slowly and is focused on producing a fast and minimal bundle.
@@ -136,6 +137,10 @@ module.exports = {
         enforce: 'pre',
         include: paths.appSrc,
       },
+      {
+        test: /\.tsc$/,
+        loader: require.resolve('raw-loader')
+      },
       // ** ADDING/UPDATING LOADERS **
       // The "file" loader handles all assets unless explicitly excluded.
       // The `exclude` list *must* be updated with every change to loader extensions.
@@ -149,6 +154,7 @@ module.exports = {
           /\.html$/,
           /\.(js|jsx)$/,
           /\.(ts|tsx)$/,
+          /\.tsc$/,
           /\.css$/,
           /\.json$/,
           /\.bmp$/,
@@ -192,11 +198,9 @@ module.exports = {
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract(
-          Object.assign(
-            {
+          Object.assign({
               fallback: require.resolve('style-loader'),
-              use: [
-                {
+              use: [{
                   loader: require.resolve('css-loader'),
                   options: {
                     importLoaders: 1,

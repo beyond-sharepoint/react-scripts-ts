@@ -138,6 +138,10 @@ module.exports = {
         enforce: 'pre',
         include: paths.appSrc,
       },
+      {
+        test: /\.tsc$/,
+        loader: require.resolve('raw-loader')
+      },
       // ** ADDING/UPDATING LOADERS **
       // The "file" loader handles all assets unless explicitly excluded.
       // The `exclude` list *must* be updated with every change to loader extensions.
@@ -158,6 +162,7 @@ module.exports = {
           // https://github.com/facebookincubator/create-react-app/issues/1713
           /\.(js|jsx)(\?.*)?$/,
           /\.(ts|tsx)(\?.*)?$/,
+          /\.tsc$/,
           /\.css$/,
           /\.json$/,
           /\.bmp$/,
