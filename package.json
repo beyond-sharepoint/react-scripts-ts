@@ -1,6 +1,6 @@
 {
   "name": "react-scripts-ts",
-  "version": "2.7.2",
+  "version": "2.7.3",
   "description": "Configuration and scripts for Create React App.",
   "repository": "wmonk/create-react-app",
   "license": "BSD-3-Clause",
@@ -27,6 +27,7 @@
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "chalk": "2.0.1",
     "cli-highlight": "1.1.4",
+    "core-js": "^2.5.0",
     "css-loader": "0.28.4",
     "dotenv": "4.0.0",
     "extract-text-webpack-plugin": "3.0.0",
