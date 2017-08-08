@@ -139,7 +139,7 @@ module.exports = {
         include: paths.appSrc,
       },
       {
-        test: /\.tsc$/,
+        test: /\.(tsc|tsxc)$/,
         loader: require.resolve('raw-loader')
       },
       // ** ADDING/UPDATING LOADERS **
@@ -162,7 +162,7 @@ module.exports = {
           // https://github.com/facebookincubator/create-react-app/issues/1713
           /\.(js|jsx)(\?.*)?$/,
           /\.(ts|tsx)(\?.*)?$/,
-          /\.tsc$/,
+          /\.(tsc|tsxc)(\?.*)?$/,
           /\.css$/,
           /\.json$/,
           /\.bmp$/,
