@@ -138,7 +138,7 @@ module.exports = {
         include: paths.appSrc,
       },
       {
-        test: /\.tsc$/,
+        test: /\.(tsc|tsxc)$/,
         loader: require.resolve('raw-loader')
       },
       // ** ADDING/UPDATING LOADERS **
@@ -154,7 +154,7 @@ module.exports = {
           /\.html$/,
           /\.(js|jsx)$/,
           /\.(ts|tsx)$/,
-          /\.tsc$/,
+          /\.(tsc|tsxc)(\?.*)?$/,
           /\.css$/,
           /\.json$/,
           /\.bmp$/,
